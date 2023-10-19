@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  </head>
+  <body style="overflow-x: hidden;">
+    <svg display="none">
+      <symbol id="arrow" viewBox="0 0 20 20">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M4.70711 3.29289C4.31658 2.90237 3.68342 2.90237 3.2929 3.29289C2.90237 3.68342 2.90237 4.31658 3.2929 4.70711L8.24263 9.65684L3.29289 14.6066C2.90237 14.9971 2.90237 15.6303 3.29289 16.0208C3.68342 16.4113 4.31658 16.4113 4.70711 16.0208L10.3603 10.3676C10.3615 10.3664 10.3628 10.3652 10.364 10.364C10.5104 10.2175 10.6019 10.0369 10.6385 9.84785C10.6843 9.61179 10.6444 9.36243 10.5189 9.14957C10.4769 9.07824 10.4252 9.011 10.364 8.94973M4.70711 3.29289L10.3606 8.94642Z" fill="#DBDBDB" />
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7071 3.29289C11.3166 2.90237 10.6834 2.90237 10.2929 3.29289C9.90237 3.68342 9.90237 4.31658 10.2929 4.70711L15.2426 9.65684L10.2929 14.6066C9.90237 14.9971 9.90237 15.6303 10.2929 16.0208C10.6834 16.4113 11.3166 16.4113 11.7071 16.0208L17.3605 10.3674C17.3617 10.3662 17.3628 10.3651 17.364 10.364C17.4128 10.3151 17.4555 10.2625 17.4921 10.2071C17.7484 9.81894 17.7057 9.29146 17.364 8.94975C17.3628 8.94857 17.3616 8.94739 17.3604 8.94622L11.7071 3.29289Z" fill="white" />
+      </symbol>
+    </svg>
+    <div class="main-container">
+      <div class="mobile-layout">
+        <div class="appbar flex justify-center">
+          <!-- <a href="#" onclick="togglePage()">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <mask id="mask0_0_1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                <path d="M9.98146 0C13.3251 0 15.6986 1.05947 17.0833 3.27304C17.983 4.71121 18.3125 5.94497 18.3326 7.23142L18.3333 7.32956V14.5939C18.3333 15.41 17.812 16.1043 17.0842 16.3619L17.0833 17.092C17.0833 18.106 16.2736 18.9315 15.2636 18.9606L15.2083 18.9614L11.5453 18.962C11.2979 19.5707 10.6992 20 10 20C9.07953 20 8.33333 19.256 8.33333 18.3383C8.33333 17.4206 9.07953 16.6766 10 16.6766C10.6992 16.6766 11.2979 17.1059 11.5453 17.7146L15.2083 17.7152C15.5412 17.7152 15.8133 17.4558 15.8323 17.1286L15.8333 17.092L15.833 16.3621C15.1049 16.1046 14.5833 15.4101 14.5833 14.5939V8.74108C14.5833 7.96152 15.2153 7.32956 15.9949 7.32956H17.0833C17.0833 6.2485 16.8087 5.18907 16.0227 3.93258C14.8645 2.08117 12.8904 1.24627 9.98146 1.24627C5.66568 1.24627 3.28676 2.88054 2.92379 7.28579L2.92 7.329L4.00514 7.32956C4.78471 7.32956 5.41667 7.96152 5.41667 8.74108V14.5939C5.41667 15.6294 4.5772 16.4689 3.54167 16.4689C2.50613 16.4689 1.66667 15.6294 1.66667 14.5939V7.32956C2.04173 2.18949 4.95856 0 9.98146 0ZM19.1667 9.8221C19.6269 9.8221 20 10.1952 20 10.6554V13.5584C20 13.9833 19.6821 14.3339 19.2712 14.3853L19.1667 14.3918V9.8221ZM0.833333 9.8221V14.3918L0.728802 14.3853C0.317904 14.3339 0 13.9833 0 13.5584V10.6554C0 10.1952 0.373096 9.8221 0.833333 9.8221Z" fill="white" />
+              </mask>
+              <g mask="url(#mask0_0_1)">
+                <path d="M0 0H20V20H0V0Z" fill="#0B186C" />
+              </g>
+            </svg>
+          </a> -->
+          <img class="logo" src="imgs/logo.png" alt="">
+        </div>
+
+        <div class="mb-banner-box">
+          <img src="images/mb-banner.png" alt="" class="img">
+
+          <a href="" class="support">
+            <img src="images/sp.png" alt="">
+          </a>
+          <a href="#" class="tele">
+            <img src="images/tele.gif" alt="">
+          </a>
+
+
+        </div>
+        <div class="actions flex flex-col aligns-center">
+          <a href="" class="mb-dlx" style="animation: z00m2 1.7s ease-out infinite;">
+            <img class="img" src="images/mb-download.png" alt="">
+          </a>
+          <button class="btn tuto-btn" style="animation: z00m2 1.7s ease-out infinite;">
+            <img img src="images/mb-tuto-btn.png" alt="">
+          </button>
+        </div>
+        <div class="webbox">
+          <img class="bgix" src="images/mb-webbox.png" alt="">
+          <div class="tbox">
+            <div class="flex aligns-center nbx">
+              <div class="red-pin">4ms</div>
+              <div class="arrowCta"></div>
+              <div class="red-pin als">www.k3bet.com</div>
+              <a href="#" class="nvsx"><img class="bavs" src="images/btn-a.png" alt=""></a>
+            </div>
+            <div class="flex aligns-center nbx">
+              <div class="red-pin">4ms</div>
+              <div class="arrowCta"></div>
+              <div class="red-pin als">www.k3bet.com</div>
+              <a href="#" class="nvsx"><img class="bavs" src="images/btn-a.png" alt=""></a>
+            </div>
+            <div class="flex aligns-center nbx">
+              <div class="red-pin">4ms</div>
+              <div class="arrowCta"></div>
+              <div class="red-pin als">www.k3bet.com</div>
+              <a href="#" class="nvsx"><img class="bavs" src="images/btn-a.png" alt=""></a>
+            </div>
+          </div>
+        </div>
+        <div class="pt-box" style="margin-top: 12px; aspect-ratio: 1/.94;">
+          <img class=" img" src="images/mb-gamebox.png" alt="">
+          <div class="txbox">
+            <div class="translate-y-item">
+              <div class="swiper vt-list vt1" dir="rtl">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img img src="images/games/1.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/2.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/3.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/4.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/1.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/2.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/3.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/4.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/17.png"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="translate-y-item">
+              <div class="swiper vt-list vt2">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img img src="images/games/5.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/6.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/7.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/8.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/5.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/6.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/7.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/8.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/18.png"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="translate-y-item">
+              <div class="swiper vt-list vt3" dir="rtl">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img img src="images/games/9.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/10.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/11.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/12.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/9.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/10.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/11.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/12.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/19.png"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="translate-y-item">
+              <div class="swiper vt-list vt4">
+                <div class="swiper-wrapper" style="transition-timing-function: linear;">
+                  <div class="swiper-slide"><img img src="images/games/13.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/14.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/15.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/16.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/13.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/14.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/15.png"></div>
+                  <div class="swiper-slide"><img img src="images/games/16.png"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fbox">
+          <div class="text-d">
+
+            <div style="margin-top: 12px;">Trung tâm giải trí trực tuyến hàng đầu thế giới, thương hiệu kinh điển 10 năm. Chất lượng tuyệt vời, cùng đội ngũ nhân viên chuyên nghiệp nhất. </div>
+            <br>
+            <div>Có hàng chục nghìn người chơi trực tuyến cùng lúc mỗi ngày, bạn có thể tham gia tranh tài với các cao thủ trên khắp thế giới mọi lúc, mọi nơi.</div>
+            <br>
+            <div>Tải xuống APP và đăng ký để trải nghiệm ngay các trò chơi mới nhất như: Game bài, Bắn cá, E-sport, Casino (các nền tảng nổi tiếng quốc tế AG, BBIN v.v).</div>
+            <br>
+            <div>Hỗ trợ đầy đủ các kênh nạp tiền khác nhau, nạp và rút tiền đơn giản nhanh chóng! Dịch vụ chăm sóc khách hàng trực tuyến 24/7 giúp bạn giải đáp mọi thắc mắc.</div>
+          </div>
+        </div>
+        <div style="height: 40px;"></div>
+      </div>
+
+
+
+      <div class="flex aligns-center" style="height: 100vh;">
+        <div class="desktop-layout">
+          <div class="service">
+            <!-- <a href="">
+              <img img src="images/sp.png" alt="">
+            </a>
+            <a href="">
+              <img img src="images/tele.gif" alt="">
+            </a> -->
+
+
+          </div>
+          <div class="col" style="padding-right: 25px;  position: relative;">
+            <div class="flex flex-col justify-between">
+              <div class="logo">
+                <img img src="imgs/blg.png" alt="">
+              </div>
+              <div class="info-gallery">
+                <div class="swiper adsSlider">
+                  <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                      <div class="gl-item">
+                        <div class="grt">Đăng ký thành viên mới và nhận 888 điểm</div>
+                        <div class="blt my12">Rút tiền ngay lập tức</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gl-item">
+                        <div class="grt">Đăng ký thành viên mới và nhận 888 điểm</div>
+                        <div class="blt my12">Rút tiền ngay lập tức</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gl-item">
+                        <div class="grt">Đăng ký thành viên mới và nhận 888 điểm</div>
+                        <div class="blt my12">Rút tiền ngay lập tức</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gl-item">
+                        <div class="grt">Đăng ký thành viên mới và nhận 888 điểm</div>
+                        <div class="blt my12">Rút tiền ngay lập tức</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gl-item">
+                        <div class="grt">Đăng ký thành viên mới và nhận 888 điểm</div>
+                        <div class="blt my12">Rút tiền ngay lập tức</div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="gl-item">
+                        <div class="grt">Đăng ký thành viên mới và nhận 888 điểm</div>
+                        <div class="blt my12">Rút tiền ngay lập tức</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex" style="margin-top: 34px;">
+                <div class="qr-box">
+                  <img src="imgs/qr.png" alt="">
+                </div>
+                <div class="app-box flex flex-col">
+                  <div class="flex aligns-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M21.5063 17.1656C20.9906 18.3188 20.7375 18.8344 20.0719 19.8469C19.1438 21.2625 17.8219 23.0344 16.1906 23.0531C14.7375 23.0625 14.3719 22.1062 12.4031 22.125C10.4344 22.1344 10.0219 23.0719 8.57813 23.0625C6.94688 23.0437 5.70001 21.45 4.77188 20.025C2.15626 16.0594 1.88438 11.3906 3.48751 8.91562C4.63126 7.15312 6.44063 6.12188 8.13751 6.12188C9.86251 6.12188 10.95 7.06875 12.3844 7.06875C13.7719 7.06875 14.6156 6.12188 16.6125 6.12188C18.1219 6.12188 19.725 6.94687 20.8594 8.3625C17.1281 10.4062 17.7375 15.7406 21.5063 17.1656ZM15.0938 4.52812C15.825 3.6 16.3688 2.27813 16.1719 0.9375C14.9906 1.02187 13.5938 1.77187 12.7875 2.75625C12.0469 3.64687 11.4469 4.96875 11.6813 6.2625C12.975 6.3 14.3156 5.53125 15.0938 4.52812Z" fill="white" />
+                    </svg>
+                    <div style="margin-left: 12px;">
+                      <div class="plf-name">iOS</div>
+                      <div class="plf-condition">iOS 12 trở lên</div>
+                    </div>
+                  </div>
+                  <div class="flex aligns-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.0031 1.20939L14.8406 2.88751C16.5187 3.72189 17.7094 5.26876 17.9625 7.09689H5.96249C6.21562 5.23126 7.45312 3.65626 9.20624 2.83126L8.09999 1.23751C8.04374 1.16251 8.06249 1.05939 8.13749 1.01251L8.16562 0.993763C8.23124 0.937513 8.33437 0.956263 8.38124 1.03126L9.51562 2.69064C10.2656 2.38126 11.0906 2.21251 11.9625 2.21251C12.8719 2.21251 13.7437 2.40001 14.5219 2.73751L15.7125 1.01251C15.7687 0.946888 15.8625 0.928138 15.9375 0.975013L15.9656 0.993763C16.0312 1.04064 16.05 1.13439 16.0031 1.20939ZM8.83124 4.68751C8.83124 5.01564 9.10312 5.28751 9.43124 5.28751C9.75937 5.28751 10.0312 5.02501 10.0312 4.68751C10.0312 4.35001 9.75937 4.08751 9.43124 4.08751C9.10312 4.08751 8.83124 4.35939 8.83124 4.68751ZM13.9875 4.68751C13.9875 5.01564 14.2594 5.28751 14.5875 5.28751C14.925 5.28751 15.1875 5.02501 15.1875 4.68751C15.1875 4.35001 14.9156 4.08751 14.5875 4.08751C14.2594 4.08751 13.9875 4.35939 13.9875 4.68751ZM3.9375 7.95935H3.66562C3.00937 7.95935 2.475 8.6531 2.48437 9.48748V14.3812C2.48437 15.225 3.01875 15.9094 3.675 15.9094H3.9375C4.59375 15.9094 5.12812 15.225 5.12812 14.3812V9.48748C5.12812 8.64373 4.59375 7.95935 3.9375 7.95935ZM20.0625 7.99683H20.325C20.9813 7.99683 21.5156 8.6812 21.5156 9.52495V14.4187C21.5156 15.2625 20.9813 15.9468 20.325 15.9468H20.0625C19.4063 15.9468 18.8719 15.2625 18.8719 14.4187V9.52495C18.8719 8.6812 19.4063 7.99683 20.0625 7.99683ZM10.9313 21.525V18.7688H13.1906V21.5625C13.1906 22.4063 13.725 23.0625 14.3813 23.0625H14.6438C15.3 23.0625 15.8344 22.4063 15.8344 21.5625V18.7782H16.8375C17.5031 18.7782 18.0563 18.2344 18.0563 17.5594V7.8938H5.97188V17.55C5.97188 18.2157 6.51563 18.7688 7.19063 18.7688H8.2875V21.525C8.2875 22.3688 8.82188 23.0532 9.47813 23.0532H9.74063C10.3969 23.0532 10.9313 22.3688 10.9313 21.525Z" fill="white" />
+                    </svg>
+
+                    <div style="margin-left: 12px;">
+                      <div class="plf-name">Android</div>
+                      <div class="plf-condition">Android 7.0 trở lên</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div style="padding-top: 15px; position: absolute; left: 0; bottom: 32px; width: 100%;">
+                <button class="btn btn-main mt-15">Click vào phiên bản di động</button>
+              </div>
+            </div>
+          </div>
+          <div class="col" style="padding-left: 25px;">
+            <div class="swiper dsList">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="img-box"><img class="img" src="images/2.png" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box"><img class="img" src="images/3.png" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box"><img class="img" src="images/4.png" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box"><img class="img" src="images/5.png" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box"><img class="img" src="images/6.png" alt=""></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="img-box"><img class="img" src="images/mb-banner.png" alt=""></div>
+                </div>
+              </div>
+              <div class="dsList-pagination"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-sheet flex flex-col">
+      <div class="overlay" style="flex: 1" onclick="toggleBottomSheet()"></div>
+      <div class="sheet-body">
+        <div class="content">
+          <div class="title">Hướng Dẫn Cài Đặt</div>
+          <div class="content-img flex justify-center">
+            <img style="width: 100%;  max-width: 500px;" src="https://fe-source.gzyuanlai.com/frontend/prod/fe-images/vd002/logo/downloadApp/wap/android/vi_VN/Samsung.png" alt="">
+          </div>
+        </div>
+        <div class="action">
+          <button class="btn" onclick="toggleBottomSheet()">Đóng</button>
+        </div>
+      </div>
+    </div>
+    <div class="other-page">
+      <div class="o-nav ">
+        <button class="btn" onclick="togglePage()">
+          <svg width="14" height="26" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.60048 13L13.2071 23.6066C13.5976 23.9972 13.5976 24.6303 13.2071 25.0209C12.8166 25.4114 12.1834 25.4114 11.7929 25.0209L0.479157 13.7072C0.0886327 13.3166 0.0886327 12.6835 0.479157 12.2929C0.479166 12.2929 0.479175 12.2929 0.479185 12.2929L11.7929 0.979202C12.1834 0.588678 12.8166 0.588677 13.2071 0.979201C13.5976 1.36973 13.5976 2.00289 13.2071 2.39342L2.60048 13Z" fill="#494949" />
+          </svg>
+        </button>
+        <div class="o-nav-title">24/7 CSKH</div>
+      </div>
+      <div class="o-body">
+        <div class="flex aligns-center">
+          <img style="width: 50px; " src="data:image/png;base64,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" alt="">
+          <div class="flex flex-col justify-center" style="margin-left: 24px;">
+            <div class="o-mess-x">Hi, Quý Khách</div>
+            <div class="o-mess-t">Chào Mừng Đến Với Trung Tâm CSKH</div>
+          </div>
+
+        </div>
+        <button class="btn o-action">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>E7839E52-7BE5-4DFE-AA29-3D9C76C14122</title>
+            <g id="5.13-\u5728\u7DDA\u5BA2\u670D" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="5.13.2_\u672A\u767B\u5165\u5BA2\u670D\u9801" transform="translate(-30.000000, -256.000000)" fill="#333333">
+                <g id="service" transform="translate(30.000000, 256.000000)">
+                  <path d="M19,16 L19,9.52631579 L19,9.52631579 C19,4.81789474 14.97,1 10,1 C5.03,1 1,4.81789474 1,9.52631579 L1,16.1578947 C1,17.7305263 2.34,19 4,19 L7,19 L7,11.4210526 L3,11.4210526 L3,9.52631579 C3,5.86 6.13,2.89473684 10,2.89473684 C13.87,2.89473684 17,5.86 17,9.52631579 L17,11.4210526 L13,11.4210526 L13,19 L16,19 C17.6568542,19 19,17.6568542 19,16 Z"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div class="o-tt">
+            <div class="o-tt-tt">24/7 CSKH1</div>
+            <div class="o-tt-mt">Phục vụ 24/7</div>
+          </div>
+          <svg class="flip-x" width="9" height="21" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.60048 13L13.2071 23.6066C13.5976 23.9972 13.5976 24.6303 13.2071 25.0209C12.8166 25.4114 12.1834 25.4114 11.7929 25.0209L0.479157 13.7072C0.0886327 13.3166 0.0886327 12.6835 0.479157 12.2929C0.479166 12.2929 0.479175 12.2929 0.479185 12.2929L11.7929 0.979202C12.1834 0.588678 12.8166 0.588677 13.2071 0.979201C13.5976 1.36973 13.5976 2.00289 13.2071 2.39342L2.60048 13Z" fill="#C6C6C6" />
+          </svg>
+        </button>
+        <button class="btn o-action">
+          <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <title>E7839E52-7BE5-4DFE-AA29-3D9C76C14122</title>
+            <g id="5.13-\u5728\u7DDA\u5BA2\u670D" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="5.13.2_\u672A\u767B\u5165\u5BA2\u670D\u9801" transform="translate(-30.000000, -256.000000)" fill="#333333">
+                <g id="service" transform="translate(30.000000, 256.000000)">
+                  <path d="M19,16 L19,9.52631579 L19,9.52631579 C19,4.81789474 14.97,1 10,1 C5.03,1 1,4.81789474 1,9.52631579 L1,16.1578947 C1,17.7305263 2.34,19 4,19 L7,19 L7,11.4210526 L3,11.4210526 L3,9.52631579 C3,5.86 6.13,2.89473684 10,2.89473684 C13.87,2.89473684 17,5.86 17,9.52631579 L17,11.4210526 L13,11.4210526 L13,19 L16,19 C17.6568542,19 19,17.6568542 19,16 Z"></path>
+                </g>
+              </g>
+            </g>
+          </svg>
+          <div class="o-tt">
+            <div class="o-tt-tt">24/7 CSKH2</div>
+            <div class="o-tt-mt">Phục vụ 24/7</div>
+          </div>
+          <svg class="flip-x" width="9" height="21" viewBox="0 0 14 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.60048 13L13.2071 23.6066C13.5976 23.9972 13.5976 24.6303 13.2071 25.0209C12.8166 25.4114 12.1834 25.4114 11.7929 25.0209L0.479157 13.7072C0.0886327 13.3166 0.0886327 12.6835 0.479157 12.2929C0.479166 12.2929 0.479175 12.2929 0.479185 12.2929L11.7929 0.979202C12.1834 0.588678 12.8166 0.588677 13.2071 0.979201C13.5976 1.36973 13.5976 2.00289 13.2071 2.39342L2.60048 13Z" fill="#C6C6C6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
